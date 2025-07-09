@@ -1,0 +1,143 @@
+/* COLOR PALETTE */
+:root {
+  --lavender: #a685e2;
+  --light-gold: #fffbe6;
+  --soft-pink: #ffd6e0;
+  --warm-gold: #ffd700;
+  --card-bg: #fff;
+  --text-main: #5a5a5a;
+  --text-muted: #8a8a8a;
+}
+
+body {
+  background: var(--light-gold);
+  color: var(--text-main);
+  font-family: 'Segoe UI Rounded', 'Inter', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+/* HERO */
+.hero-personal {
+  text-align: center;
+  padding: 72px 16px 48px 16px;
+  background: var(--soft-pink);
+  border-radius: 32px;
+  margin: 48px auto 40px auto;
+  max-width: 600px;
+  box-shadow: 0 4px 24px rgba(166,133,226,0.08);
+}
+.hero-personal h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--lavender);
+  margin-bottom: 0.7rem;
+}
+.hero-intro {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+}
+
+/* SECTION STYLES */
+.memories-personal, .hobbies-personal, .activities-personal, .contact-personal {
+  background: var(--card-bg);
+  border-radius: 24px;
+  max-width: 600px;
+  margin: 32px auto;
+  padding: 40px 24px 32px 24px;
+  box-shadow: 0 2px 12px rgba(166,133,226,0.06);
+}
+.memories-personal {
+  border-left: 8px solid var(--lavender);
+  background: var(--warm-gold);
+}
+.hobbies-personal {
+  border-left: 8px solid var(--soft-pink);
+  background: var(--light-gold);
+}
+.activities-personal {
+  border-left: 8px solid var(--lavender);
+  background: var(--card-bg);
+}
+.contact-personal {
+  border-left: 8px solid var(--soft-pink);
+  background: var(--warm-gold);
+}
+.memories-personal h2, .hobbies-personal h2, .activities-personal h2, .contact-personal h2 {
+  color: var(--lavender);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+}
+
+/* GALLERY POLAROID STYLE */
+.gallery-personal {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 12px;
+}
+.gallery-personal img {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(166,133,226,0.13), 0 1.5px 8px rgba(0,0,0,0.07);
+  background: #fff;
+  padding: 8px 8px 18px 8px;
+  border: 2px solid #f3eaff;
+  transition: transform 0.15s;
+}
+.gallery-personal img:hover {
+  transform: rotate(-2deg) scale(1.04);
+  box-shadow: 0 12px 32px rgba(166,133,226,0.18);
+}
+
+/* LISTS */
+.hobbies-personal ul, .activities-personal ul {
+  padding-left: 1.2em;
+  font-size: 1.08rem;
+}
+.hobbies-personal li, .activities-personal li {
+  margin-bottom: 0.5em;
+}
+
+/* CONTACT */
+.contact-personal a {
+  color: var(--lavender);
+  text-decoration: none;
+  font-weight: 600;
+}
+.contact-personal a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 32px 16px 24px 16px;
+  color: #b0b0b0;
+  font-size: 1rem;
+  background: none;
+}
+
+@media (max-width: 700px) {
+  .hero-personal, .memories-personal, .hobbies-personal, .activities-personal, .contact-personal {
+    max-width: 98vw;
+    padding: 24px 6px 18px 6px;
+  }
+  .gallery-personal {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .gallery-personal img {
+    width: 100%;
+    height: 140px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+  
